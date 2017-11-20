@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+   
+    <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+    <script src='/bootstrap/js/jquery-1.11.0.js'></script>
+    <script src='/bootstrap/js/bootstrap.js'></script>
+  </head>
+  <body>
+
+ <%- include('./header.ejs',{headername:'博客系统首页',isShow:true})%>
+ 
+<!-- 左侧 -->
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
+<!-- 左侧 -->
+
+ <div class="container">
+	<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>作者</th>
+          <th>标题</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0;i<list.length;i++){%>
+            <tr>
+          		<td><%= list[i].name%>-----<%= list[i]._id%></td>
+          		<td><a href='/detail?id=<%= list[i]._id%>'><%= list[i].title%></a></td>
+         		<td>
+<a class="btn btn-info" href="/modify?id=<%= list[i]._id%>" role="button" >修改</a>
+<a class="btn btn-warning" href="/removing?id=<%= list[i]._id%>" role="button" >删除</a>        			
+         		</td>
+            </tr>
+       <%}%>
+      </tbody>
+    </table>
+ 
+	</div>
+
+
+    
+  </body>
+</html>

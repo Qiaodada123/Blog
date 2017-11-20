@@ -1,0 +1,30 @@
+body{
+	background: url("/images/bg.jpg") no-repeat center;
+	background-size: cover; 
+	background-position: top;
+}
+@font-face{
+	font-family:mu;
+	src:url(../zti/font709/AaStrawberrySister.ttf);
+}
+.container {
+	width: 500px;
+	position: relative;
+	margin-top: 220px;
+	margin-left: 400px
+}
+.form-group{
+	font-family: mu;
+	font-size: 50px
+	width: 400px 
+}
+.container input{
+  	border-color: palevioletred;
+  	width: 400px
+}
+
+.btn-success{
+	display: block;
+	width: 80px
+}
+
